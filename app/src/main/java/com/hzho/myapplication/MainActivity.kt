@@ -19,28 +19,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        statusTextView = findViewById(R.id.main_activity_status_text_view)
-        resetButton = findViewById(R.id.main_activity_reset_button)
-        gameGrid = findViewById(R.id.main_activity_game_grid)
+        statusTextView = findViewById(R.id.tvStatus)
+        resetButton = findViewById(R.id.btnReset)
+        gameGrid = findViewById(R.id.gameGrid)
 
 //        initializeBoard()
 
         resetButton.setOnClickListener {
-//            resetGame()
+            resetGame()
         }
     }
 
-    private fun checkWin(): Boolean {
-        // Check rows, columns, and diagonals
-        for (i in 0..2) {
-            if (board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) return true
-            if (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer) return true
+    private fun isBoardFull(): Boolean {
+        for (row in board) {
+            if (row.contains("")) return false
         }
-        if (board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) return true
-        if (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer) return true
-
-        return false
+        return true
     }
 
-
+    private fun resetGame() {
+        board = Array(3) { Array(3) { "" } }
+        currentPlayer = "X"
+        gameActive = true
+        statusTextView.text = "Player X's Turn"
+//        initializeBoard()
+    }
 }
