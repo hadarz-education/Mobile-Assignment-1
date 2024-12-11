@@ -1,19 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- Status TextView -->
     <TextView
+        android:id="@+id/main_activity_status_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal"
+        android:text="Player X\'s Turn"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Game Board as a GridLayout -->
+    <GridLayout
+        android:id="@+id/main_activity_game_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <!-- Row 1 -->
+        <Button
+            android:id="@+id/btnCell00"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:tag="0,0"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCell01"
+            android:backgroundTint="#FFFFFF"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:tag="0,1"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCell02"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:tag="0,2"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <!-- Row 2 -->
+        <Button
+            android:id="@+id/btnCell10"
+            android:backgroundTint="#FFFFFF"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:tag="1,0"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCell11"
+            android:backgroundTint="#FFFFFF"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:tag="1,1"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCell12"
+            android:backgroundTint="#FFFFFF"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:tag="1,2"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <!-- Row 3 -->
+        <Button
+            android:id="@+id/btnCell20"
+            android:backgroundTint="#FFFFFF"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:tag="2,0"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCell21"
+            android:layout_width="80dp"
+            android:backgroundTint="#FFFFFF"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:tag="2,1"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCell22"
+            android:backgroundTint="#FFFFFF"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:tag="2,2"
+            android:text=""
+            app:cornerRadius="0dp"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+    </GridLayout>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/main_activity_reset_button"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#545252"
+        android:text="Reset"
+        app:cornerRadius="0dp" />
+
+</LinearLayout>
