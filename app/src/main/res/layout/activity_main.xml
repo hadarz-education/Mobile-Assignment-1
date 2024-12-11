@@ -141,11 +141,12 @@
     <!-- Reset Button -->
     <Button
         android:id="@+id/main_activity_reset_button"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="273dp"
+        app:cornerRadius="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="#858282"
+        android:background="#545252"
+        android:backgroundTint="#545252"
         android:text="Reset" />
 
 </LinearLayout>
