@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleMove(button: Button) {
+
         if (!gameActive) return
 
         val tag = button.tag.toString().split(",")
@@ -55,9 +56,11 @@ class MainActivity : AppCompatActivity() {
         if (checkWin()) {
             statusTextView.text = "Player $currentPlayer Wins!"
             gameActive = false
+            resetButton.text = "Play Again"
         } else if (isBoardFull()) {
             statusTextView.text = "It's a Draw!"
             gameActive = false
+            resetButton.text = "Play Again"
         } else {
             currentPlayer = if (currentPlayer == "X") "O" else "X"
             statusTextView.text = "Player $currentPlayer's Turn"
@@ -88,6 +91,7 @@ class MainActivity : AppCompatActivity() {
         currentPlayer = "X"
         gameActive = true
         statusTextView.text = "Player X's Turn"
+        resetButton.text = "Reset"
         initializeBoard()
     }
 }
