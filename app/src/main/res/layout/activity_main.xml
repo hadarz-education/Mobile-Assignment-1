@@ -145,7 +145,6 @@
         app:cornerRadius="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="#545252"
         android:backgroundTint="#545252"
         android:text="Reset" />
 
