@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Player X\'s Turn"
-        android:textColor="#448AFF"
         android:textSize="18sp" />
 
     <!-- Game Board as a GridLayout -->
@@ -35,6 +34,7 @@
             android:backgroundTint="#FF0000"
             android:tag="0,0"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
 
         <Button
@@ -45,15 +45,17 @@
             android:layout_margin="4dp"
             android:tag="0,1"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/btnCell02"
-            android:backgroundTint="#FF0000"
+            style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
-            android:backgroundTint="#FF5722"
+            android:backgroundTint="#FF0000"
+            app:cornerRadius="0dp"
             android:tag="0,2"
             android:text=""
             android:textSize="24sp" />
@@ -67,6 +69,7 @@
             android:layout_margin="4dp"
             android:tag="1,0"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
 
         <Button
@@ -77,6 +80,7 @@
             android:layout_margin="4dp"
             android:tag="1,1"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
 
         <Button
@@ -87,6 +91,7 @@
             android:layout_margin="4dp"
             android:tag="1,2"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
 
         <!-- Row 3 -->
@@ -98,6 +103,7 @@
             android:layout_margin="4dp"
             android:tag="2,0"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
 
         <Button
@@ -108,6 +114,7 @@
             android:layout_margin="4dp"
             android:tag="2,1"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
 
         <Button
@@ -118,6 +125,7 @@
             android:layout_margin="4dp"
             android:tag="2,2"
             android:text=""
+            app:cornerRadius="0dp"
             android:textSize="24sp" />
     </GridLayout>
 
