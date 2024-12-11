@@ -23,11 +23,60 @@ class MainActivity : AppCompatActivity() {
         resetButton = findViewById(R.id.main_activity_reset_button)
         gameGrid = findViewById(R.id.main_activity_game_grid)
 
-//        initializeBoard()
+        initializeBoard()
 
         resetButton.setOnClickListener {
-//            resetGame()
+            resetGame()
         }
+    }
+
+    private fun initializeBoard() {
+        for (i in 0 until gameGrid.childCount) {
+            val button = gameGrid.getChildAt(i) as Button
+            button.text = ""
+            button.setOnClickListener {
+                handleMove(button)
+            }
+        }
+    }
+
+    private fun handleMove(button: Button) {
+        if (!gameActive) return
+
+        val tag = button.tag.toString().split(",")
+        val row = tag[0].toInt()
+        val col = tag[1].toInt()
+
+        if (board[row][col].isNotEmpty()) return // Cell already taken
+
+        board[row][col] = currentPlayer
+        button.text = currentPlayer
+
+        if (checkWin()) {
+            statusTextView.text = "Player $currentPlayer Wins!"
+            gameActive = false
+        } else if (isBoardFull()) {
+            statusTextView.text = "It's a Draw!"
+            gameActive = false
+        } else {
+            currentPlayer = if (currentPlayer == "X") "O" else "X"
+            statusTextView.text = "Player $currentPlayer's Turn"
+        }
+    }
+
+    private fun isBoardFull(): Boolean {
+        for (row in board) {
+            if (row.contains("")) return false
+        }
+        return true
+    }
+
+    private fun resetGame() {
+        board = Array(3) { Array(3) { "" } }
+        currentPlayer = "X"
+        gameActive = true
+        statusTextView.text = "Player X's Turn"
+        initializeBoard()
     }
 
     private fun checkWin(): Boolean {
