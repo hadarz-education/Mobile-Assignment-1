@@ -35,6 +35,7 @@
             android:backgroundTint="#FFFFFF"
             android:tag="0,0"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <Button
@@ -45,6 +46,7 @@
             android:layout_margin="4dp"
             android:tag="0,1"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <Button
@@ -55,6 +57,7 @@
             android:backgroundTint="#FFFFFF"
             android:tag="0,2"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <!-- Row 2 -->
@@ -66,6 +69,7 @@
             android:layout_margin="4dp"
             android:tag="1,0"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <Button
@@ -76,6 +80,7 @@
             android:layout_margin="4dp"
             android:tag="1,1"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <Button
@@ -86,6 +91,7 @@
             android:layout_margin="4dp"
             android:tag="1,2"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <!-- Row 3 -->
@@ -97,6 +103,7 @@
             android:layout_margin="4dp"
             android:tag="2,0"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <Button
@@ -107,6 +114,7 @@
             android:layout_margin="4dp"
             android:tag="2,1"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
 
         <Button
@@ -117,6 +125,7 @@
             android:layout_margin="4dp"
             android:tag="2,2"
             android:text=""
+            android:textColor="#000000"
             android:textSize="24sp" />
     </GridLayout>
 
