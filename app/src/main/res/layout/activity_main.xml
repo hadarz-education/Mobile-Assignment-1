@@ -53,6 +53,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
+            android:backgroundTint="#FF5722"
             android:tag="0,2"
             android:text=""
             android:textSize="24sp" />
