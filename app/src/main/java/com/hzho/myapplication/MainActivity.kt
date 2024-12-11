@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        statusTextView = findViewById(R.id.tvStatus)
-        resetButton = findViewById(R.id.btnReset)
-        gameGrid = findViewById(R.id.gameGrid)
+        statusTextView = findViewById(R.id.main_activity_status_text_view)
+        resetButton = findViewById(R.id.main_activity_reset_button)
+        gameGrid = findViewById(R.id.main_activity_game_grid)
 
         initializeBoard()
 

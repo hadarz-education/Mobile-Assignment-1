@@ -9,7 +9,7 @@
 
     <!-- Status TextView -->
     <TextView
-        android:id="@+id/tvStatus"
+        android:id="@+id/main_activity_status_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -18,7 +18,7 @@
 
     <!-- Game Board as a GridLayout -->
     <GridLayout
-        android:id="@+id/gameGrid"
+        android:id="@+id/main_activity_game_grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:rowCount="3"
@@ -111,7 +111,7 @@
 
     <!-- Reset Button -->
     <Button
-        android:id="@+id/btnReset"
+        android:id="@+id/main_activity_reset_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
