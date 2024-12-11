@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#000000"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <!-- Status TextView -->
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Player X\'s Turn"
+        android:textColor="#448AFF"
         android:textSize="18sp" />
 
     <!-- Game Board as a GridLayout -->
@@ -21,23 +23,23 @@
         android:id="@+id/main_activity_game_grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:rowCount="3"
-        android:columnCount="3">
+        android:columnCount="3"
+        android:rowCount="3">
 
         <!-- Row 1 -->
         <Button
             android:id="@+id/btnCell00"
-            style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
+            android:backgroundTint="#FF0000"
             android:tag="0,0"
             android:text=""
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/btnCell01"
-            style="@style/Widget.AppCompat.Button.Small"
+            android:backgroundTint="#FF0000"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
@@ -47,7 +49,7 @@
 
         <Button
             android:id="@+id/btnCell02"
-            style="@style/Widget.AppCompat.Button.Small"
+            android:backgroundTint="#FF0000"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
@@ -58,7 +60,7 @@
         <!-- Row 2 -->
         <Button
             android:id="@+id/btnCell10"
-            style="@style/Widget.AppCompat.Button.Small"
+            android:backgroundTint="#FF0000"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
@@ -68,7 +70,7 @@
 
         <Button
             android:id="@+id/btnCell11"
-            style="@style/Widget.AppCompat.Button.Small"
+            android:backgroundTint="#FF0000"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
@@ -78,7 +80,7 @@
 
         <Button
             android:id="@+id/btnCell12"
-            style="@style/Widget.AppCompat.Button.Small"
+            android:backgroundTint="#FF0000"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
@@ -89,7 +91,7 @@
         <!-- Row 3 -->
         <Button
             android:id="@+id/btnCell20"
-            style="@style/Widget.AppCompat.Button.Small"
+            android:backgroundTint="#FF0000"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
@@ -99,8 +101,8 @@
 
         <Button
             android:id="@+id/btnCell21"
-            style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="80dp"
+            android:backgroundTint="#FF0000"
             android:layout_height="80dp"
             android:layout_margin="4dp"
             android:tag="2,1"
@@ -109,7 +111,7 @@
 
         <Button
             android:id="@+id/btnCell22"
-            style="@style/Widget.AppCompat.Button.Small"
+            android:backgroundTint="#FF0000"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_margin="4dp"
@@ -124,6 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="#FF0000"
         android:text="Reset" />
 
 </LinearLayout>
