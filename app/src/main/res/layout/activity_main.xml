@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Player X\'s Turn"
+        android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
     <!-- Game Board as a GridLayout -->
