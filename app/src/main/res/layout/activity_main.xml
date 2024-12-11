@@ -144,7 +144,7 @@
         android:layout_width="273dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="#ADA6A6"
+        android:backgroundTint="#545252"
         android:text="Reset"
         app:cornerRadius="0dp" />
 
