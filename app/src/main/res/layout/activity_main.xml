@@ -142,10 +142,10 @@
     <Button
         android:id="@+id/main_activity_reset_button"
         android:layout_width="273dp"
-        app:cornerRadius="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="#545252"
-        android:text="Reset" />
+        android:backgroundTint="#ADA6A6"
+        android:text="Reset"
+        app:cornerRadius="0dp" />
 
 </LinearLayout>
