@@ -64,21 +64,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun isBoardFull(): Boolean {
-        for (row in board) {
-            if (row.contains("")) return false
+    private fun checkWin(): Boolean {
+        // Check rows, columns, and diagonals
+        for (i in 0..2) {
+            if (board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) return true
+            if (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer) return true
         }
-        return true
+        if (board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) return true
+        if (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer) return true
+
+        return false
     }
 
-    private fun resetGame() {
-        board = Array(3) { Array(3) { "" } }
-        currentPlayer = "X"
-        gameActive = true
-        statusTextView.text = "Player X's Turn"
-        initializeBoard()
-    }
-    
     private fun isBoardFull(): Boolean {
         for (row in board) {
             if (row.contains("")) return false
